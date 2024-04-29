@@ -20,6 +20,7 @@ namespace SimpleInterestCalculator
             Console.WriteLine("Pls enter your principal amount");
             double userPrincipalAmount = double.Parse(Console.ReadLine());
 
+           
             Console.WriteLine("Pls enter your interest rate");
             double userInterestRate = double.Parse(Console.ReadLine());
 
@@ -43,7 +44,7 @@ namespace SimpleInterestCalculator
             //(b) calculating final Amount
             double finalAmountResult = FirstInvestment.CalculateFinalAmount();
             //(c) calculating interest rate
-            double interestRateResult = FirstInvestment.CalculateIntrestRate( userPrincipalAmount);
+            double interestRateResult = FirstInvestment.CalculateIntrestRate( finalAmountResult , userPrincipalAmount);
             //(d) calculating investment duration
             int investmentDurationResult = FirstInvestment.CalculateInvestmentDuration( (int)userPrincipalAmount, userInterestRate);
 
@@ -54,12 +55,7 @@ namespace SimpleInterestCalculator
             Console.WriteLine($"Welcome{name}\n Simple Interest: {simpleInterestResult}.\n Final-Amount: {finalAmountResult}.\n Interest Rate: {interestRateResult}.\n Investment-Duration: {investmentDurationResult}");
 
 
-            //int c1 = 1800;
-            //int c2 = 900;
-            //int calc = c1 / c2;
-
-            //Console.WriteLine(calc);
-
+          
         }
     }
 }

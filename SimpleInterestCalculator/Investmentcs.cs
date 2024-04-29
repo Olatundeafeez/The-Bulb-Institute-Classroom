@@ -28,14 +28,14 @@ namespace SimpleInterestCalculator
         }
 
         //Method for Calculating Interest Rate
-        public double CalculateIntrestRate(double principal)
+        public double CalculateIntrestRate(double finalAmount, double principal)
         {
-            return (CalculateSimpleInterest() * 100) / (principal * Time);
+            return ((finalAmount - principal) / (principal * Rate)) * 100;
         }
         //Method for calculating duration
-        public int CalculateInvestmentDuration( int principal,double rate)
+        public int CalculateInvestmentDuration(double finalAmount, int principal,double rate)
         {
-            return (int)(CalculateSimpleInterest() * 100 / (principal * rate));
+            return (int)(CalculateSimpleInterest() * 100 / (principal * Time));
             
         }
 
